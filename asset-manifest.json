@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/schedula/static/css/main.7547d389.css",
+    "main.js": "/schedula/static/js/main.e46c707b.js",
+    "static/media/me.jpg": "/schedula/static/media/me.3e515f8d4d22b2fd5829.jpg",
+    "index.html": "/schedula/index.html",
+    "main.7547d389.css.map": "/schedula/static/css/main.7547d389.css.map",
+    "main.e46c707b.js.map": "/schedula/static/js/main.e46c707b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7547d389.css",
+    "static/js/main.e46c707b.js"
+  ]
+}
