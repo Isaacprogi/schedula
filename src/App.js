@@ -1,23 +1,32 @@
 import './App.css'
-import Home from './pages/Home'
-import NewTask from './pages/NewTask'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
-import { Routes, Route } from 'react-router-dom'
-import PrivateRoute from './components/routing/privateRoute'
-
+import {useState} from 'react'
+import About from './components/About'
+import Contact from './components/Contact'
+import NavBar from './components/NavBar'
+import Works from './components/Works'
+import Skills from './components/Skills'
+import Home from './components/Home'
+import {Routes,Route} from 'react-router-dom'
 
 
 function App() {
-  return <div className='bg-gray-100 font-sans w-full h-screen overflow-hidden'>
-    
-    <Routes>
-      <Route path='/' exact element={<PrivateRoute><Home /> </PrivateRoute>} />
-      <Route path='/new-task' exact element={<PrivateRoute><NewTask /></PrivateRoute>} />
-      <Route path='/login' exact element={<Login />}/>
-      <Route path='/signup' exact element={<Signup />}/>
-    </Routes>
-  </div>
+  const[nav,setNav] = useState(false)
+  const handleClick = () => setNav(!nav)
+
+  return (
+    <div className="font-sans flex flex-col bg-gray-800 w-full h-screen overflow-hidden">
+       <NavBar handleClick={handleClick} nav={nav}/> 
+     <Routes  > 
+       <Route path='/' exact element={<Home setNav={setNav}/>}/> 
+        <Route path='/about-me'  element={<About setNav={setNav} />}/>
+        <Route path='/skills' element={<Skills setNav={setNav}/>}/>
+        <Route path='/works' element={<Works setNav={setNav}/>}/>
+        <Route path='/contact' element={<Contact setNav={setNav}/>}/>
+         <Route/> 
+      </Routes> 
+    </div>
+  )
 }
 
 export default App
+

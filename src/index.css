@@ -1,34 +1,3 @@
-
 @tailwind base;
-
-@media screen and (min-width:1024px) {
-    *{
-        scrollbar-width: thin;
-        scrollbar-color:red;
-        }
-        
-        
-        *::-webkit-scrollbar{
-            width: 15px;
-        }
-        
-        *::-webkit-scrollbar-track{
-            background-color: rgb(139, 139, 187);
-            border-radius: 5px;
-        }
-        
-        *::-webkit-scrollbar-thumb{
-            background-color: rgb(84, 131, 117);
-            border-radius: 14px;
-            border-radius: 5px;
-        }
-        
-}
-
 @tailwind components;
-@tailwind utilities
-
-
-
-  
-
+@tailwind utilities; 
